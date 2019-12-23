@@ -29,10 +29,26 @@ void PreOrder(TreeNode *T)
     PreOrder(T->left);
     PreOrder(T->right);
 }
+void InOrder(TreeNode *T)
+{
+    if(T==NULL) return;
+    InOrder(T->left);
+    cout<<T->ch<<" ";
+    InOrder(T->right);
+}
+void PostOrder(TreeNode *T)
+{
+    if(T==NULL) return;
+    PostOrder(T->left);
+    PostOrder(T->right);
+    cout<<T->ch<<" ";
+}
 int main(void)
 {
     TreeNode *Tree;
     create(Tree);
     PreOrder(Tree);
+    InOrder(Tree);
+    PostOrder(Tree);
     return 0;
 }
