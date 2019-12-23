@@ -43,6 +43,65 @@ BinaryTreeNode * CreateBinaryTree2()
     return T;
 }
 */
+/*
+TreeNode *create()
+{
+	char ch[20];
+	int i = 0, flag = 0 ,top = 0;
+	YTreeNode *tree, *head, *stack[20], *st;
+	
+	std::cin>>ch;
+	tree = (struct node *)malloc(sizeof(struct node));
+	head=tree;
+	tree->data = ch[i];
+	tree->lchild = NULL;
+	tree->rchild = NULL;
+    stack[top++] = tree;
+    int a = 0;
+	i++;
+	while(i<strlen(ch))
+	{
+		if((ch[i]=='#') && (flag==1))
+		{
+			st=stack[--top];
+			while(stack[top-1]->rchild == st)
+			{
+				st=stack[--top];
+			}
+		}
+		else if((ch[i]=='#') && (flag==0))
+		{
+			flag = 1;
+		}
+		else if(ch[i]!='#')
+		{
+			tree = new TreeNode;
+			tree->data = ch[i];
+			tree->lchild = NULL;
+			tree->rchild = NULL;
+			if(flag == 0)
+			{
+				stack[top-1]->lchild = tree;
+				stack[top] = tree;
+				top++;
+			}
+			if(flag == 1)
+			{
+				flag = 0;
+				stack[top-1]->rchild = tree;
+				top++;
+			}
+		}
+		else
+		{
+			std::cout<<"sorry,your enter is error"<<std::endl;
+			exit(0);
+		}
+		i++;
+	}
+	return head;
+}
+*/
 //递归前序、中序、后序遍历
 void PreOrder(TreeNode *T)
 {
