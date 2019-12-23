@@ -47,11 +47,11 @@ int main(void)
 {
     TreeNode *Tree;
     create(Tree);
-    cout<<"前序："<<endl;
-    PreOrder(Tree);
-    cout<<"中序："<<endl;
-    InOrder(Tree);
-    cout<<"后序："<<endl;
+    cout<<"前序：";
+    PreOrder(Tree);cout<<endl;
+    cout<<"中序：";
+    InOrder(Tree);cout<<endl;
+    cout<<"后序：";
     PostOrder(Tree);
     return 0;
 }
