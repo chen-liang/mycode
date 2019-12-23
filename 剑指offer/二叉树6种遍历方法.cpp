@@ -21,6 +21,28 @@ void create(TreeNode * &T)
         create(T->right);
     }
 }
+/*
+BinaryTreeNode * CreateBinaryTree2()
+{
+    BinaryTreeNode *T;
+ 
+    char data;
+    cin>>data; // scanf();
+ 
+    if(data=='#')
+        T=NULL;
+    else
+    {
+        T= new BinaryTreeNode;//(BinaryTreeNode *)malloc(sizeof(BinaryTreeNode))
+        T->value=data;
+ 
+        T->left=CreateBinaryTree2();
+        T->right=CreateBinaryTree2();
+    }
+ 
+    return T;
+}
+*/
 //递归前序、中序、后序遍历
 void PreOrder(TreeNode *T)
 {
