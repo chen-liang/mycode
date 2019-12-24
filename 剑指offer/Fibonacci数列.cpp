@@ -13,6 +13,14 @@ public:
            return Fibonacci(n-1)+Fibonacci(n-2);
         }
         */
+       int res=1,pre=1,temp=0;
+       for(int i=3;i<=n;i++)
+       {
+           temp=res;
+           res=res+pre;
+           pre=temp;
+       }
+       return res;
        
     }
 };
