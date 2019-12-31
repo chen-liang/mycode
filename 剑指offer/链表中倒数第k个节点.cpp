@@ -1,3 +1,6 @@
+/*题目描述
+输入一个链表，输出该链表中倒数第k个结点。
+*/
 #include<stack>
 using namespace std;
 struct ListNode {
