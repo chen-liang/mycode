@@ -1,6 +1,6 @@
 /*
 输入一个链表，反转链表后，输出新链表的表头。
-https://blog.csdn.net/qq_36472818/article/details/96379507
+http://blog.csdn.net/qq_36472818/article/details/96379507
 */
 #include<iostream>
 using namespace std;
