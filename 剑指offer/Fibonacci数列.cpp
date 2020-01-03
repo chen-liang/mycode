@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-/*class Solution {
+class Solution {
 public:
     int Fibonacci(int n) {
         if(n<1)
@@ -25,7 +25,7 @@ public:
        
     }
 };
-*/
+
 class Solution
 {
     public:
