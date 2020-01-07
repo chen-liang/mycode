@@ -23,6 +23,7 @@ struct TreeNode {
 			val(x), left(NULL), right(NULL) {
 	}
 };
+//�ݹ鷨
 class Solution {
 public:
     void Mirror(TreeNode *pRoot) {
@@ -36,3 +37,4 @@ public:
          Mirror(pRoot->right);
     }
 };
+//�ǵݹ鷨
