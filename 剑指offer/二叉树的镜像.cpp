@@ -14,6 +14,7 @@
     	11 9 7  5
 */
 #include<iostream>
+#include<stack>
 using namespace std;
 struct TreeNode {
 	int val;
@@ -38,3 +39,24 @@ public:
     }
 };
 //�ǵݹ鷨
+class Solution {
+public:
+    void Mirror(TreeNode *pRoot) {
+        if(pRoot==NULL) return;
+        stack<TreeNode*> stackNode;
+        stackNode.push(pRoot);
+        while(stackNode.size())
+        {     
+          TreeNode* pRoot1=stackNode.top();
+          stackNode.pop();
+          if(pRoot1->left!=NULL||pRoot1->right!=NULL)
+          {
+              TreeNode* temp=pRoot1->right;
+             pRoot1->right=pRoot1->left;
+             pRoot1->left=temp;
+          }
+          if(pRoot1->left!=NULL) stackNode.push(pRoot1->left);
+          if(pRoot1->right!=NULL) stackNode.push(pRoot1->right);
+    }
+    } 
+}; 
