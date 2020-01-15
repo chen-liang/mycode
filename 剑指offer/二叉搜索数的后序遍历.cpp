@@ -1,7 +1,6 @@
 #include<vector>
 using namespace std;
 /*�ݹ鷨*/
-
 class Solution {
     bool judge(vector<int>& a, int l, int r){
         if(l >= r) return true;
