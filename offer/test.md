@@ -17,8 +17,7 @@
 
 ![picture](https://www.linuxidc.com/upload/2018_05/temp_18051412116507.png)
 
-![](https://raw.githubusercontent.com/chen-liang/mycode/master/%E5%89%91%E6%8C%87offer/test.jpg)
-![](https://github.com/chen-liang/mycode/blob/master/剑指offer/test.jpg)
+![]()
 
 
 大脑只是一个器官,思考,感知等等都不过是一种生理反馈,本质上是一簇电信号,人生来本身就是一个机会吧。从茫茫宇宙或者虚无中来到这个世界上，不知从何时开始有了‘我’，但终去的时刻还是清晰的，短短不过数百年，总要留点存下的痕迹。天空中有飞鸟飞过，云知道它来过。以前常常思考人生的意义，后来有一瞬间明白，意义不过是认为赋予的，万事万物不过只是存在着。就像星光的意义一样。
