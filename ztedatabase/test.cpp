@@ -1,7 +1,7 @@
 //功能实现版/home/web/ztedatabase/input1.csv
 #include<iostream>
 #include <vector>
-//#include<ctime>
+#include<ctime>
 #include<fstream>
 #include<sstream>
 #include<unordered_map>
@@ -51,11 +51,11 @@ int main()
     vector<struct CSVDATA2> csvdata2;   //存储t2
     vector<struct JOIN> JOINNY;    //存储join 后的结果
     vector<RESULT> result;    //存储group by后的结果
-    char const *file1="/media/chen/F/C++/mycode/ztedatabase/input7.csv";
-    char const *file2="/media/chen/F/C++/mycode/ztedatabase/input8.csv";
+    char const *file1="E:\\C++\\mycode\\ztedatabase\\input7.csv";
+    char const *file2="E:\\C++\\mycode\\ztedatabase\\input8.csv";
     csvdata1=READCSV1(file1);//读取数据
     csvdata2=READCSV2(file2);
-   cout << "The run time is:" << (double)clock() /CLOCKS_PER_SEC<< "s" << endl;
+   //cout << "The run time is:" << (double)clock() /CLOCKS_PER_SEC<< "s" << endl;
 
     JOINNY=JOINF(csvdata1,csvdata2);//实现join on t1.id3=t2.id3
     vector<struct CSVDATA1>().swap(csvdata1);
@@ -63,7 +63,9 @@ int main()
     result=GROUP(JOINNY);//实现group by+select  max(t1.id1),min(t2.id1)
    vector<struct JOIN>().swap(JOINNY);
    int r=result.size()-1;
+   
    ORDERBY(result,0,r);  //实现order by max(t1.id1),t2.id2,t1.id2
+    cout << "The run time is:" << (double)clock() /CLOCKS_PER_SEC<< "s" << endl;
     for(auto it=result.begin();it!=result.end();it++)
     {
         printf("%d,%d\n",(*it).max,(*it).min);
